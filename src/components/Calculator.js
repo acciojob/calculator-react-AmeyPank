@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/App.css';
 
-function App() {
+function Calculator() {
   const [result, setResult] = useState("");
 
   const handleClick = (e) => {
@@ -50,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default Calculator;
