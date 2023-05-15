@@ -15,22 +15,12 @@ function App() {
 
   const calculate = () => {
     try {
-      const operators = /[*/+-]/g;
-      const lastChar = result.slice(-1);
-  
-      // Check if the last character is an operator or decimal point
-      if (operators.test(lastChar) || lastChar === '.') {
-        setResult('Error');
-        return;
-      }
-  
       const expression = math.evaluate(result);
-      setResult(math.round(expression, 10).toString()); // Round the result to avoid floating-point precision issues
+      setResult(expression.toString());
     } catch (error) {
       setResult('Error');
     }
   };
-  
 
   return (
     <div className="App">
