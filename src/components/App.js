@@ -17,17 +17,17 @@ function App() {
     try {
       const operators = /[*/+-]/g;
       const lastChar = result.slice(-1);
-      
-      // Check if the last character is an operator
-      if (operators.test(lastChar)) {
-        setResult("Error");
+  
+      // Check if the last character is an operator or decimal point
+      if (operators.test(lastChar) || lastChar === '.') {
+        setResult('Error');
         return;
       }
   
       const expression = math.evaluate(result);
-      setResult(expression.toString());
+      setResult(math.round(expression, 10).toString()); // Round the result to avoid floating-point precision issues
     } catch (error) {
-      setResult("Error");
+      setResult('Error');
     }
   };
   
