@@ -8,7 +8,6 @@
     "start": "NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --mode development --watch --open --hot",
     "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +16,7 @@
     "cypress": "^9.5.0",
     "jest-junit": "^11.1.0",
     "jsdom": "^16.4.0",
+    "mathjs": "^11.8.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "style-loader": "^1.2.1",
