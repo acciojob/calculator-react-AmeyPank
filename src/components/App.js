@@ -15,12 +15,22 @@ function App() {
 
   const calculate = () => {
     try {
+      const operators = /[*/+-]/g;
+      const lastChar = result.slice(-1);
+      
+      // Check if the last character is an operator
+      if (operators.test(lastChar)) {
+        setResult("Error");
+        return;
+      }
+  
       const expression = math.evaluate(result);
       setResult(expression.toString());
     } catch (error) {
-      setResult('Error');
+      setResult("Error");
     }
   };
+  
 
   return (
     <div className="App">
